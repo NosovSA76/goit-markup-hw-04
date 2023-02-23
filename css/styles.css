@@ -8,9 +8,13 @@
     --only-white:#ffffff;
     --button-bacgraund:#F4F4FD;
     --button-border:#E7E9FC;
+    --icon-border:#8E8F99;
     --set-gap: 24px;
+    --icon-color:#AFB1B8;
+    --icon-green: #31D0AA;
+
     }
-h1, h2, h3, ul, p{
+h1, h2, h3, h4, ul, p{
     margin:0;
     padding: 0;
 }
@@ -25,8 +29,7 @@ body{
     color:var(--primary-text-color);
     font-weight: 400;
     font-size: 16px;
-   
-}
+   }
 .conteiner{
     width: 1158px;
     padding: 0 15px;
@@ -122,6 +125,9 @@ body{
     background-color:var(--title-text-color);
     padding: 100px 0;
 }
+.footer .conteiner{
+    display: flex;
+}
 .logo-footer{
     font-family: "Raleway", sans-serif;
     cursor: pointer;
@@ -138,12 +144,51 @@ body{
     color: var(--button-bacgraund);
 }
 .footer-text{
-     margin-top: 16px;
+    margin-top: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--button-border);
     width: 264px;
    
+}
+.footer-media{
+    padding: 0 120px;
+}
+.media-text{
+    color: var(--only-white);
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+.footer-action{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 0 24px;
+   
+}
+
+.footer-button{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border:none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-button:hover, .footer-button:focus{
+  
+    background-color: var(--icon-green);}
+
+.action-icon{
+    width: 16px;
+    height: 16px;
+    fill: var(--button-bacgraund);
 }
 
 
@@ -162,13 +207,25 @@ body{
     clip-path: inset(50%);
     margin: -1px;
 }
+.section-title{
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--title-text-color);
+    letter-spacing: 0.02em;
+    line-height: 1.11;
+    text-align: center;
+    margin-bottom: 72px;}
 
 /* Section Hero */
 
 .hero{
- background-color:var(--title-text-color); 
+    background-color:var(--title-text-color); 
     padding: 188px 0;
     text-align: center;
+    background-image: 
+    linear-gradient(to top, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(../images/people-office.jpg); 
+    background-size:cover;
 }
 
 
@@ -206,22 +263,35 @@ body{
 
  /* Section1 Advantages*/
 .advantages{
-    padding: 96px 0 0 0;
+    padding: 120px 0 0 0;
 }
 
 .advantages-list{
-     display: flex;
+    display: flex;
     list-style: none; 
     flex-wrap: wrap;
-   
+    gap: 0 24px;
 }
+
+.button-icon{
+    padding: 0;
+    border: none; 
+    border-radius: 4px;
+    background-color: var(--button-bacgraund);
+}
+
+
+.icon{
+    width: 264px;
+    height: 112px;
+}
+
 .advantages-item{
-   flex-basis: calc((100% - var(--set-gap)*3)/4);
- 
+ flex-basis: calc((100% - var(--set-gap)*3)/4);
+
 }
-.advantages-item:not(:first-child){
-  margin-left: var(--set-gap);  
-}
+
+
 
 
 .advantages-title-small{
@@ -230,7 +300,7 @@ body{
    color: var(--title-text-color);
    letter-spacing: 0.02em;
    line-height: 1.2;
-   margin-bottom: 8px;}
+   margin: 8px 0;}
  
 .advantages-text{
     letter-spacing: 0.02em;
@@ -239,15 +309,7 @@ body{
 
 /* Sektion2 Cards*/
 
-.card-title{
-    font-weight: 700;
-    font-size: 36px;
-    color: var(--title-text-color);
-    letter-spacing: 0.02em;
-    line-height: 1.11;
-    text-align: center;
-    margin-bottom: 72px;
-}
+
 .card-list{
     display: flex;
     list-style: none; 
@@ -266,20 +328,11 @@ body{
 .team{
    background: var(--button-bacgraund);
 }
-
-.team-title{
-    font-weight: 700;
-    font-size: 36px;
-    color: var(--title-text-color);
-    letter-spacing: 0.02em;
-    line-height: 1.11;
-    text-align: center;
-    margin-bottom: 72px;
-}
 .team-list{
     display: flex;
     list-style: none; 
     flex-wrap: wrap;
+    gap: 0 24px;
 }
 .section-title{
     font-weight: 700;
@@ -298,7 +351,6 @@ body{
    letter-spacing: 0.02em;
    line-height: 1.2;
    margin-top: 32px;
-   margin-bottom: 8px;
    text-align: center;
 }
 
@@ -306,6 +358,8 @@ body{
     letter-spacing: 0.02em;
     line-height: 1.5;
     text-align: center;
+    margin: 8px 0;
+    gap: 0 24px;
 }
 
 .team-cards{
@@ -313,15 +367,79 @@ body{
     background-color: var(--only-white);
     padding-bottom: 32px;
     border-radius: 4px;
+     
 }
 
-.team-cards:not(:first-child){
-   margin-left: var(--set-gap);}
+.action{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 0 24px;
+    padding: 0 16px;
+}
+
+.team-button{
+    background-color:var(--akcent-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border:none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-button:hover, .team-button:focus{
+  
+    background-color: var(--active-color);}
+
+.action-icon{
+    width: 16px;
+    height: 16px;
+    fill: var(--button-bacgraund);
+}
+/* Section Customers */
+
+.customers {
+    padding: 130px 0 120px 0;
+}
+.customers-list{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 0 24px;
+    }
+    .customers-button{
+    border: 1px solid var(--icon-border);
+    border-radius: 4px;
+    width: 168px;
+    height: 88px;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--only-white);
+    color: var(--icon-color);
+}
+
+.customers-button:hover, .customers-button:focus{
+    color: var(--active-color);
+    border: 1px solid var(--active-color);}
+  
+.customers-icon{
+    width: 104px;
+    height: 56px;
+    fill: currentColor;
+}
+
+  
+ 
 
 
 /* portfolio */
 .portfolio{
-    padding: 96px 0 72px 0;
+    padding: 96px 0 120px 0;
 }
 
 .filter-list{
@@ -329,6 +447,7 @@ body{
     list-style: none;
     justify-content:center;
     margin-bottom: 72px;
+    gap: 0 var(--set-gap);
 }
 
 .button-filter{
@@ -344,28 +463,21 @@ body{
     line-height: 1.5;
     letter-spacing: 0.04em;
     color: var(--akcent-color);
-    padding: calc(0.5 * var(--set-gap)) var(--set-gap);
+    padding: 12px 24px;
 }
 
-.filter-list-item:not(:first-child){
-    margin-left: var(--set-gap);
-}
 
 .button-filter:hover, .button-filter:focus{
     background: var(--akcent-color);
     color: var(--only-white);
+    border-color: transparent;
 }
 .projects-list{
     display: flex;
     list-style: none; 
     flex-wrap: wrap; 
+    gap: 48px 24px;
 }
-.projectsa{
-    flex-basis: calc((100%- var(--set-gap)*2)/3);
-    margin-bottom: calc(2 * var(--set-gap));
-}
-.projectsa:not(:nth-child(3n + 1)){
-margin-left: var(--set-gap);}
 
 .projects{
      text-decoration: none;
@@ -387,7 +499,7 @@ margin-left: var(--set-gap);}
     color: var(--primary-text-color);
 }
 
-.project-text{
+.project-text{ 
     border-left: 1px solid var(--button-border);
     border-right: 1px solid var(--button-border);
     border-bottom: 1px solid var(--button-border);
