@@ -45,6 +45,7 @@ body{
 .header{
     padding: 24px 0;
     border-bottom: 1px solid var(--button-border);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header .conteiner{
@@ -166,7 +167,7 @@ body{
     padding: 0;
     margin: 0;
     list-style: none;
-    gap: 0 24px;
+    gap: 0 16px;
    
 }
 
@@ -186,8 +187,8 @@ body{
     background-color: var(--icon-green);}
 
 .action-icon{
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
     fill: var(--button-bacgraund);
 }
 
@@ -226,6 +227,8 @@ body{
     linear-gradient(to top, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url(../images/people-office.jpg); 
     background-size:cover;
+    width: 1440px;
+    margin: 0 auto;
 }
 
 
@@ -253,6 +256,7 @@ body{
     letter-spacing: 0.04em;
     cursor: pointer;
     padding: 16px 32px 16px 32px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     
      
   }
@@ -274,16 +278,21 @@ body{
 }
 
 .button-icon{
+    width: 264px;
+    height: 112px;
     padding: 0;
     border: none; 
     border-radius: 4px;
     background-color: var(--button-bacgraund);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 .icon{
-    width: 264px;
-    height: 112px;
+    width: 64px;
+    height: 64px;
 }
 
 .advantages-item{
@@ -314,13 +323,13 @@ body{
     display: flex;
     list-style: none; 
     flex-wrap: wrap;
+    gap: 0 24px;
 }
 
 .card-item{
    flex-basis: calc((100% - var(--set-gap)*2)/3);
 }
-.card-item:not(:first-child){
-   margin-left: var(--set-gap);}
+
 
 
 /* Section3 Team */
@@ -366,7 +375,8 @@ body{
     flex-basis: calc((100%- var(--set-gap)*3)/4);
     background-color: var(--only-white);
     padding-bottom: 32px;
-    border-radius: 4px;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
      
 }
 
@@ -376,10 +386,11 @@ body{
     margin: 0;
     list-style: none;
     gap: 0 24px;
-    padding: 0 16px;
+   justify-content: center;
 }
 
-.team-button{
+.social-link{
+    display: block;
     background-color:var(--akcent-color);
     border-radius: 50%;
     width: 40px;
@@ -390,11 +401,11 @@ body{
     justify-content: center;
 }
 
-.team-button:hover, .team-button:focus{
+.social-link:hover, .social-link:focus{
   
     background-color: var(--active-color);}
 
-.action-icon{
+.social-icon{
     width: 16px;
     height: 16px;
     fill: var(--button-bacgraund);
@@ -411,19 +422,21 @@ body{
     list-style: none;
     gap: 0 24px;
     }
-    .customers-button{
+    .customers-link{
     border: 1px solid var(--icon-border);
     border-radius: 4px;
+    display: block;
     width: 168px;
     height: 88px;
-     display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: var(--only-white);
     color: var(--icon-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      
 }
 
-.customers-button:hover, .customers-button:focus{
+.customers-link:hover, .customers-link:focus{
     color: var(--active-color);
     border: 1px solid var(--active-color);}
   
@@ -431,6 +444,8 @@ body{
     width: 104px;
     height: 56px;
     fill: currentColor;
+    
+    
 }
 
   
@@ -471,6 +486,7 @@ body{
     background: var(--akcent-color);
     color: var(--only-white);
     border-color: transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .projects-list{
     display: flex;
@@ -505,4 +521,5 @@ body{
     border-bottom: 1px solid var(--button-border);
     padding: 32px 16px;
 }
-
+.projectsa:hover, .projectsa:focus{
+       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);}
